@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUZZ-BOWL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <div class="logo">Buzz Bowl</div>
+  <div class="menu-toggle">☰</div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="cart">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </li>
+  </ul>
+</nav>
+
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Delicious Bowls Delivered Fast 🍲</h1>
+      <p>Fresh, tasty, and right at your doorstep. Order your favorite bowl now!</p>
+      <button>Order Now</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://down-yuantu.pngtree.com/original_origin_pic/19/04/05/8141517610b5160f4d3b19b7f368e7db.png?e=1758817713&st=NTg1YjJlMmUxNzA4ZjQyNTkzYWZmZWQ5MWI4ZDgyMzU&n=%E2%80%94Pngtree%E2%80%94a+bowl+of+cartoon+food_4440485.png" alt="Buzz Bowl Food">
+    </div>
+  </section>
+
+  <!-- Services / Menu -->
+  <section id="services">
+    <h2>Order our best food options</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://hiibangalore.com/wp-content/uploads/2025/06/North-Indian-catering-services-in-Bangalore-e1748778489706.png" alt="North Indian">
+        <h3>North Indian</h3>
+        <p>Indulge with the best of North Indian cuisines.</p>
+         <div class="price-cart">
+        <span class="price">₹250</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      </div>
+      <div class="card">
+        <img src="https://imgmediagumlet.lbb.in/media/2024/12/6763c390ad5b133601d57eed_1734591376530.jpg" alt="South Indian">
+        <h3>South Indian</h3>
+        <p>Explore hot & spicy dishes that are speciality of South India.</p>
+        <div class="price-cart">
+        <span class="price">₹220</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      </div>
+      <div class="card">
+        <img src="https://mummyrecipes.in/wp-content/uploads/2020/01/DonneBiryaniCover-1024x682.jpg" alt="Biriyani">
+        <h3>Biriyani</h3>
+        <p>The spice of life can often be find in a plate of biriyani.</p>
+        <div class="price-cart">
+        <span class="price">₹300</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1064&auto=format&fit=crop" alt="Desserts">
+        <h3>Desserts</h3>
+        <p>Life tastes sweeter with desserts.</p>
+        <div class="price-cart">
+        <span class="price">₹150</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      </div>
+      <div class="card">
+        <img src="https://w0.peakpx.com/wallpaper/702/688/HD-wallpaper-ice-cream-background-beautiful-best-available-for-ice-cream.jpg" alt="Icecreams">
+        <h3>Icecreams</h3>
+        <p>Happiness melts in your mouth.</p>
+         <div class="price-cart">
+        <span class="price">₹120</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8SFbObMtzp4TKZpok3f-nJx8HfAKAXoNjKg&s" alt="Pizzas & Burgers">
+        <h3>Pizzas & Burgers</h3>
+        <p>Where pizza meets burgers.</p>
+        <div class="price-cart">
+        <span class="price">₹350</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Buzz Bowl, we believe good food brings people together. From sizzling biryanis to cheesy pizzas, creamy desserts to refreshing ice creams — we deliver fresh, hygienic, and flavorful meals right to your doorstep. With a focus on quality, speed, and customer satisfaction, our mission is simple: to make every bite a delightful experience you can trust.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Buzz Bowl. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle Mobile Menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Simple Form Validation
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Message Sent! Thank you for contacting Buzz Bowl.');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
